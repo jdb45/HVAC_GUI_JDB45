@@ -204,7 +204,7 @@ public class HVAC {
                 String problem = getStringInput();
                 //getting the age of the water heater
                 System.out.println("How old is your water heater?");
-                WaterHeater.waterHeaterAge = scanner.nextInt();
+                WaterHeater.waterHeaterAge = getStringInput();
 
                 //calling the method for WaterHeater
                 WaterHeater wh = new WaterHeater(address, WaterHeater.serviceRequest, problem, new Date(), WaterHeater.waterHeaterAge);

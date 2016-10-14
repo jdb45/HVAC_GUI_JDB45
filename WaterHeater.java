@@ -3,14 +3,14 @@ import java.util.Date;
 public class WaterHeater extends ServiceCall{
 
     //creating static variables
-    public static int waterHeaterAge;
+    public static String waterHeaterAge;
     public static String serviceRequest;
     //giving CITY_FEE a final value becasue that value wont change
     protected static final double CITY_FEE = 20;
 
 
     //creating a constructor
-    public WaterHeater(String serviceAddress, String serviceRequest, String problemDescription, Date date, int waterHeaterAge)  {
+    public WaterHeater(String serviceAddress, String serviceRequest, String problemDescription, Date date, String waterHeaterAge)  {
         super(serviceAddress, problemDescription, date);
     }
 
