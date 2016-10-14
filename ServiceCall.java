@@ -11,6 +11,7 @@ public class ServiceCall {
     protected String problemDescription;
     protected Date reportedDate;
     protected Date resolvedDate;
+    protected String serviceRequested;
 
     protected final static double UNRESOLVED = -1  ;  //Flag to indicate this hasn't been resolved so we don't have a fee yet
     
@@ -72,6 +73,14 @@ public class ServiceCall {
 
     public void setFee(double fee) {
         this.fee = fee;
+    }
+
+    public String getServiceRequested(String serviceRequested ){
+        return serviceRequested;
+    }
+
+    public void setServiceRequested(String serviceRequested){
+        this.serviceRequested = serviceRequested;
     }
 
 

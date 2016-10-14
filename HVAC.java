@@ -13,8 +13,8 @@ public class HVAC {
     private static LinkedList<ServiceCall> todayServiceCalls;
     private static LinkedList<ServiceCall> resolvedServiceCalls;
 
-    private static Scanner scanner;   //Global scanner used for all input
 
+    private static Scanner scanner;   //Global scanner used for all input
 
     public static void main(String[] args) {
 
@@ -147,7 +147,8 @@ public class HVAC {
 
         System.out.println("1. Add service call for furnace");
         System.out.println("2. Add service call for AC unit");
-        System.out.println("3. Quit");
+        System.out.println("3. Add service call for water heater");
+        System.out.println("4. Quit");
 
         int choice = getPositiveIntInput();
 
@@ -192,6 +193,28 @@ public class HVAC {
 
             }
             case 3: {
+                //getting input to enter the address
+                System.out.println("Enter address of water heater");
+                String address = getStringInput();
+                //getting the input for what service is being requested for the water heater
+                System.out.println("Enter the service requested for the water heater");
+                WaterHeater.serviceRequest = getStringInput();
+                //getting input for the problem of the water heater
+                System.out.println("Enter description of problem");
+                String problem = getStringInput();
+                //getting the age of the water heater
+                System.out.println("How old is your water heater?");
+                WaterHeater.waterHeaterAge = scanner.nextInt();
+
+                //calling the method for WaterHeater
+                WaterHeater wh = new WaterHeater(address, WaterHeater.serviceRequest, problem, new Date(), WaterHeater.waterHeaterAge);
+                //adding water heater to service calls
+                todayServiceCalls.add(wh);
+                System.out.println("Added the following furnace to list of calls:\n" + wh);
+                break;
+
+            }
+            case 4: {
                 return;
 
             }
