@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class HVAC {
 
 
-    /** Program to manage service calls to furnaces and AC units
+    /**
+     * Program to manage service calls to furnaces and AC units
      */
 
     private static LinkedList<ServiceCall> todayServiceCalls;
@@ -17,6 +18,8 @@ public class HVAC {
     private static Scanner scanner;   //Global scanner used for all input
 
     public static void main(String[] args) {
+
+        HVACGUI hvac = new HVACGUI();
 
         //Use todayServiceCalls as a Queue
         //So, add new calls to the end with add()
@@ -33,7 +36,7 @@ public class HVAC {
 
         scanner = new Scanner(System.in);
 
-        boolean quit = false;
+       /* boolean quit = false;
 
         while (!quit) {
 
@@ -272,6 +275,7 @@ public class HVAC {
         String entry = scanner.nextLine();
         return entry;
 
+    }*/
     }
 }
 

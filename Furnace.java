@@ -10,12 +10,12 @@ public class Furnace extends ServiceCall {
 
     private int furnaceType;
 
-    public Furnace(String serviceAddress, String problemDescription, Date date, int furnaceType) {
+    public Furnace(String serviceAddress, String problemDescription, Date date, String furnaceType) {
 
         super(serviceAddress, problemDescription, date);
 
         //TODO Error checking - is this a valid furnace type?
-        this.furnaceType = furnaceType;
+        //this.furnaceType = furnaceType;
     }
 
     @Override
